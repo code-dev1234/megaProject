@@ -48,7 +48,7 @@ exports.auth = async (req,res,next)=>{
 
 // for Student
 
-exports.isStudent = async (res,res,next)=>{
+exports.isStudent = async (req,res,next)=>{
     try{
 
         if(req.user.accountType != "Student"){
