@@ -1,4 +1,4 @@
-const Course = require("../models/Coures")
+const Course = require("../models/Course")
 const Tags = require("../models/Tag")
 const User = require("../models/User")
 const {uploadImageTOCloudinary} = require("../utils/imageUploader")
@@ -52,8 +52,8 @@ exports.createCourse = async (req,res)=>{
 
         //create entry in db
         const newCourse = await Course.create({
-            couresName,
-            couresDescription,
+            courseName,
+            courseDescription,
             instructor:instructor._id,
             whatYouWillLearn,
             price,

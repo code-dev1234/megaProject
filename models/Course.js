@@ -1,11 +1,11 @@
 const mongoose = require("mongoose")
 
-const couresSchema = new mongoose.Schema({
-       couresName:{
+const courseSchema = new mongoose.Schema({
+       courseName:{
         type:String,
         trim:true
        },
-       couresDescription:{
+       courseDescription:{
         type:String,
         trim:true,
        },
@@ -17,7 +17,7 @@ const couresSchema = new mongoose.Schema({
        whatYouWillLearn:{
         type:String
        },
-       couresContent:[
+       courseContent:[
         {
             type:mongoose.Schema.Type.objectId,
             ref:"Section"
@@ -49,4 +49,4 @@ const couresSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model("Coures",couresSchema)
+module.exports = mongoose.model("Course",courseSchema)
